@@ -1,11 +1,24 @@
-@(header: Html = Html(""))
 <!DOCTYPE html>
 <html lang="[en]">
     <head>
         <meta charset="UTF-8">
-            @header
+        <title>Minotaur</title>
+        <link rel="stylesheet" href="@routes.Assets.versioned("stylesheets/main.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
     </head>
     <body>
+        <div id="header">
+            <div class="body" class="group">
+                <a href="/" id="logo" class="group"><img alt="Trafficland_logo" src="@routes.Assets.versioned("images/trafficland_logo.gif")"/></a>
+            </div>
+        </div>
         Hello
+        <ul id="footer" class="group">
+            <li id="footer-copyright">TrafficLand &copy; 2017</li>
+            <li><a href="/">About Us</a></li>
+            <li><a href="/">Privacy Policy</a></li>
+            <li><a href="/">Terms of Use</a></li>
+            <li><a href="/">Contact Us</a></li>
+        </ul>
     </body>
 </html>
