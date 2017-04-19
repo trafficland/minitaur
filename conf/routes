@@ -1,0 +1,5 @@
+GET     /                           controllers.IndexController.index
+
+GET     /assets/lib/*file           controllers.WebJarAssets.at(file)
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
