@@ -93,7 +93,7 @@ body{
 
 #main-content{
     background-color: red;
-    height: 2000px;
+    height: 1000px;
 }
 
 #dma-list{
@@ -101,6 +101,7 @@ body{
     float: left;
     width: 25%;
     height: inherit;
+    overflow: scroll;
 }
 
 #active-dma{
@@ -115,4 +116,16 @@ body{
     float: right;
     width: 50%;
     height: inherit;
+}
+
+.dma-button-active{
+    background-color: aquamarine;
+    width: 100%;
+    height: 200px;
+}
+
+.dma-button-inactive{
+    background-color: burlywood;
+    width: 100%;
+    height: 200px;
 }
