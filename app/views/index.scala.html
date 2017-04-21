@@ -8,12 +8,12 @@
     </head>
     <body>
         <div id="header">
-            <div class="body" class="group">
+            <div class="group">
                 <a href="/" id="logo" class="group"><img alt="Trafficland_logo" src="@routes.Assets.versioned("images/trafficland_logo.gif")"/></a>
             </div>
         </div>
         <div id="main-content">
-            <div id="dma-list">
+            <div id="dma-list" class="main-col">
                 <div class="dma-button-inactive">DMA0</div>
                 <div class="dma-button-inactive">DMA1</div>
                 <div class="dma-button-active">DMA2</div>
@@ -23,8 +23,27 @@
                 <div class="dma-button-inactive">DMA6</div>
                 <div class="dma-button-inactive">DMA7</div>
             </div>
-            <div id="active-dma">Active DMA</div>
-            <div id="map-pane">Map Pane</div>
+            <div id="active-dma" class="main-col">
+                <div class="feed">
+                    <img src="http://tc01.bos.tl.com:8080/transcoder/frame.jpg?webid=1182&size=full" alt="1182">
+                </div>
+                <div class="feed">
+                    <img src="http://tc01.bos.tl.com:8080/transcoder/frame.jpg?webid=1204&size=full" alt="1204">
+                </div>
+                <div class="feed">
+                    <img src="http://tc01.bos.tl.com:8080/transcoder/frame.jpg?webid=1228&size=full" alt="1228">
+                </div>
+                <div class="feed">
+                    <img src="http://tc01.bos.tl.com:8080/transcoder/frame.jpg?webid=1286&size=full" alt="1286">
+                </div>
+                <div class="feed">
+                    <img src="http://tc01.bos.tl.com:8080/transcoder/frame.jpg?webid=406408&size=full" alt="406408">
+                </div>
+                <div class="feed">
+                    <img src="http://tc01.bos.tl.com:8080/transcoder/frame.jpg?webid=407719&size=full" alt="407719">
+                </div>
+            </div>
+            <div id="map-pane" class="main-col">Map Pane</div>
         </div>
         <ul id="footer" class="group">
             <li id="footer-copyright">TrafficLand &copy; 2017</li>

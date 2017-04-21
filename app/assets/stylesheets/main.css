@@ -58,6 +58,7 @@ body{
     text-align: center;
     font: 12px helvetica, arial  sans-serif normal;
     background: #333;
+    height:80vh;
 }
 
 #header{
@@ -93,7 +94,11 @@ body{
 
 #main-content{
     background-color: red;
-    height: 1000px;
+    height: inherit;
+}
+
+.main-col{
+    padding-top: 10px;
 }
 
 #dma-list{
@@ -109,6 +114,7 @@ body{
     display: inline-block;
     width: 25%;
     height: inherit;
+    overflow: scroll;
 }
 
 #map-pane{
