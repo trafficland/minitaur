@@ -1,3 +1,4 @@
+@(mapsUrl: String)
 <!DOCTYPE html>
 <html lang="[en]">
     <head>
@@ -5,6 +6,18 @@
         <title>Minotaur</title>
         <link rel="stylesheet" href="@routes.Assets.versioned("stylesheets/main.css")">
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
+        <script>
+                function loadMap() {
+                    // TODO The starting lat and long should come from the active DMA
+                    var cntrLatLong = {lat: 38.859540, lng: -77.332696};
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        zoom: 12,
+                        center: cntrLatLong,
+                        mapTypeId: google.maps.MapTypeId.HYBRID
+                    });
+                }
+        </script>
+        <script src="@mapsUrl&callback=loadMap" async defer> </script>
     </head>
     <body>
         <div id="header">
@@ -24,6 +37,7 @@
                 <div class="dma-button-inactive">DMA7</div>
             </div>
             <div id="active-dma" class="main-col">
+                <!-- TODO These images should be served by minotaur as a proxy to IE. -->
                 <div class="feed">
                     <img src="http://tc01.bos.tl.com:8080/transcoder/frame.jpg?webid=1182&size=full" alt="1182">
                 </div>
@@ -43,7 +57,9 @@
                     <img src="http://tc01.bos.tl.com:8080/transcoder/frame.jpg?webid=407719&size=full" alt="407719">
                 </div>
             </div>
-            <div id="map-pane" class="main-col">Map Pane</div>
+            <div id="map-pane" class="main-col">
+                <div id="map"></div>
+            </div>
         </div>
         <ul id="footer" class="group">
             <li id="footer-copyright">TrafficLand &copy; 2017</li>
