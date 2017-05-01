@@ -1,0 +1,8 @@
+include "application.conf"
+
+imageengine.templateurl = "${imageengine_templateurl}"
+
+akka {
+  loggers = ["akka.event.slf4j.Slf4jLogger"]
+  loglevel="DEBUG"
+}
